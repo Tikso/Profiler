@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Profiler</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header_welcome">Welcome Profiler</string>
+    <string name="email_header">Email</string>
+    <string name="email_hint">tikson@gmail.com</string>
+    <string name="password_header">Password</string>
+    <string name="password_hint">123456</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
 </resources>
