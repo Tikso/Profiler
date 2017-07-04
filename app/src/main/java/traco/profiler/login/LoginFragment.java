@@ -1,6 +1,7 @@
 package traco.profiler.login;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,9 +16,14 @@ import traco.profiler.profilepage.ProfilPageFragment;
  */
 public class LoginFragment extends Fragment {
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 
     public LoginFragment() {
         // Required empty public constructor
+        setRetainInstance(true);
     }
 
     public static LoginFragment newInstance() {

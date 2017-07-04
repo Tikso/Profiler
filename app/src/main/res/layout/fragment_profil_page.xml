@@ -1,13 +1,159 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="traco.profiler.profilepage.ProfilPageFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:weightSum="3">
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/relativeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp" />
+
+            <ImageButton
+                android:id="@+id/imgLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_dialog_info" />
+
+            <ImageButton
+                android:id="@+id/imgSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_toLeftOf="@+id/imgLogout"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_popup_reminder" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imgSettings"
+                android:text="Tikson Tom"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtName"
+                android:text="tiksontom@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeAbout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imgAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@android:drawable/ic_menu_view" />
+
+            <TextView
+                android:id="@+id/txtAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/imgAbout"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/imgAbout"
+                android:text="About Me"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/txtAbout"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txtAboutIntersts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeIntersets"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imgIntersts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@android:drawable/btn_star_big_on" />
+
+            <TextView
+                android:id="@+id/txtIntersts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/imgIntersts"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/imgIntersts"
+                android:text="Interests"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/txtIntersts"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txtInterstsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view2" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@android:drawable/star_big_on" />
+</RelativeLayout>
